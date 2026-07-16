@@ -199,3 +199,17 @@ var totalPrice30 = products30.reduce(function (acc, product) {
   return acc + product.price;
 }, 0);
 console.log(totalPrice30);
+
+var categorieCountries = {};
+
+for (var i = 0; i < data.length; i++) {
+    var u = data[i];
+
+    if (!categorieCountries[u.city]) {
+        categorieCountries[u.city] = [];
+    }
+
+    categorieCountries[u.city].push(u);
+}
+
+console.log(categorieCountries);
