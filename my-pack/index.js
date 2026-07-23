@@ -1,25 +1,26 @@
 function add(a, b) {
-    return a + b;
+  return Number(a) + Number(b);
 }
 
 function subtract(a, b) {
-    return a - b;
+  return Number(a) - Number(b);
 }
 
 function multiply(a, b) {
-    return a * b;
+  return Number(a) * Number(b);
 }
 
 function divide(a, b) {
-    if (b === 0) {
-        return "Cannot divide by zero";
-    }
-    return a / b;
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+
+  return Number(a) / Number(b);
 }
 
 module.exports = {
-    add,
-    subtract,
-    multiply,
-    divide
+  add,
+  subtract,
+  multiply,
+  divide,
 };
